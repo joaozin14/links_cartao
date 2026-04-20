@@ -1,0 +1,68 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f9; /* Cor profissional, um cinza bem claro azulado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Container que segura os 4 itens */
+.container-contato {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria as 2 colunas */
+    gap: 20px; /* Espaçamento entre os quadros */
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Estilização de cada quadro (card) */
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 2px solid #e0e6ed; /* Bordas suaves */
+    border-radius: 12px; /* Cantos arredondados para um ar moderno */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: #007bff; /* Realça a borda com um azul profissional */
+}
+
+h2 {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+a, .unico {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    word-break: break-all; /* Garante que links longos não quebrem o layout */
+}
+
+a:hover, .unico:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade: Se a tela for pequena (celular), vira 1 coluna só */
+@media (max-width: 600px) {
+    .container-contato {
+        grid-template-columns: 1fr;
+    }
+}
